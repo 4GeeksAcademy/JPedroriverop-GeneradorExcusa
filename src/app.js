@@ -18,16 +18,21 @@ window.onload = function() {
     "while I was praying"
   ];
 
-  let iwho = Math.floor(Math.random() * who.length);
+  function indiceRandom(arreglo) {
+    return Math.floor(Math.random() * arreglo.length);
+  }
+
+  let iwho = indiceRandom(who);
+  console.log(iwho);
 
   let excusa =
     who[iwho] +
     " " +
-    action[Math.floor(Math.random() * action.length)] +
+    action[indiceRandom(action)] +
     " " +
-    what[Math.floor(Math.random() * what.length)] +
+    what[indiceRandom(what)] +
     " " +
-    when[Math.floor(Math.random() * when.length)];
+    when[indiceRandom(when)];
 
   console.log(excusa);
 
